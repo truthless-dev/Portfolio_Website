@@ -1,0 +1,6 @@
+[flake8]
+format = %(path)s:: %(row)d:%(col)d: %(code)s %(text)s
+max-line-length = 88
+ignore =
+    # Imported but unused. Django's generated app modules include a lot of these.
+    F401,
