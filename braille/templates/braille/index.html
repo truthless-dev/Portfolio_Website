@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block meta %}
+ {{ block.super }}
+ <script src="{% static 'braille/js/brailler.js' %}"></script>
+{% endblock meta %}
+
+{% block content %}
+<div>
+<p>To make your unicode Braille, simply navigate to the edit field below and start typing!</p>
+</div>
+<div>
+<h2>How It Works</h2>
+<p>You can type dots 1, 2, and 3 with the &apos;f&apos;, &apos;d&apos;, and &apos;s&apos; keys, respectively. &apos;j&apos;, &apos;k&apos;, and &apos;l&apos; are your dots 4, 5, and 6. Finally, dots 7 and 8 are typed with &apos;a&apos; and &apos;&semi;&apos; keys, in the event you need to enter computer Braille. Use the backspace and enter keys to delete your last cell and insert a newline, respectively.</p>
+<p>You can use common keystrokes like CTRL+A and CTRL+C within the field as usual, but any print text will be rejected to avoid mingling print and Braille.</p>
+</div>
+<div>
+<h2>Brailler</h2>
+<label>Enter your Braille here: </label><textarea id="brailler" rows="10" cols="80"></textarea>
+</div>
+{% endblock content %}

@@ -31,6 +31,7 @@ SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 # Application definition
 
 INSTALLED_APPS = [
+    "braille.apps.BrailleConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
