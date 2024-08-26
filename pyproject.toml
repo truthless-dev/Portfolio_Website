@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "portfolio"
-version = "0.1.0"
+version = "0.1.1"
 description = "Personal portfolio website"
 authors = ["truthless-dev <truthless.deviant248@simplelogin.fr>"]
 license = "MIT"

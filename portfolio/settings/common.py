@@ -27,6 +27,11 @@ DOTENV_FILE = BASE_DIR / ".env"
 load_dotenv(DOTENV_FILE)
 SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://tylerchristie.dev/",
+    "https://*.tylerchristie.dev/",
+]
+
 
 # Application definition
 
