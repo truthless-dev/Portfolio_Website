@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul class="nav nav-tabs" id="tabList" role="tablist">
+ <li class="nav-item" role="presentation">
+  <button class="nav-link active" id="summaryTab" data-bs-toggle="tab" data-bs-target="#summary" type="button" role="tab" aria-controls="summary" aria-selected="true">Summary</button>
+ </li>
+ <li class="nav-item" role="presentation">
+  <button class="nav-link" id="skillsTab" data-bs-toggle="tab" data-bs-target="#skills" type="button" role="tab" aria-controls="skills" aria-selected="false">Skills</button>
+ </li>
+ <li class="nav-item" role="presentation">
+  <button class="nav-link" id="educationTab" data-bs-toggle="tab" data-bs-target="#education" type="button" role="tab" aria-controls="education" aria-selected="false">Education</button>
+ </li>
+ <li class="nav-item" role="presentation">
+  <button class="nav-link" id="experienceTab" data-bs-toggle="tab" data-bs-target="#experience" type="button" role="tab" aria-controls="experience" aria-selected="false">Experience</button>
+ </li>
+ <li class="nav-item" role="presentation">
+  <button class="nav-link" id="contactTab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+ </li>
+</ul>
+<div class="tab-content" id="tabListContent">
+ <div class="tab-pane fade show active" id="summary" role="tabpanel" aria-labelledby="summaryTab">
+  Self-taught, passionate programmer for over twelve years. Loves to learn how things work and how they can be improved, and to pass those improvements  on to heighten the user experience. Excellent written communicator skilled at logical, detail-oriented thinking and problem solving.
+  </div>
+ <div class="tab-pane fade" id="skills" role="tabpanel" aria-labelledby="skillsTab">
+  <h3>Operating Systems</h3>
+  <ul>
+   <li>iOS</li>
+   <li>Linux</li>
+   <li>Windows</li>
+  </ul>
+  <h3>Development Tools</h3>
+  <ul>
+   <li>Clang and GCC</li>
+   <li>Docker and DockerHub</li>
+   <li>GDB and PDB</li>
+   <li>Git and GitHub/GitLab</li>
+   <li>VS code</li>
+  </ul>
+  <h3>Development methodologies</h3>
+  <ul>
+   <li>Agile</li>
+   <li>DRY</li>
+   <li>KISS</li>
+  </ul>
+  <h3>Languages</h3>
+  <ul>
+   <li>C</li>
+   <li>C#</li>
+   <li>Go</li>
+   <li>Javascript</li>
+   <li>Lua</li>
+   <li>SQL</li>
+   <li>Python</li>
+   <li>XML</li>
+  </ul>
+  <h3>Assistive Technologies and Standards</h3>
+  <ul>
+   <li>Braille (grades 1 and 2, UEB, music)</li>
+   <li>JAWS</li>
+   <li>Narrator</li>
+   <li>NVDA</li>
+   <li>Voiceover for iOS</li>
+   <li>WCAG</li>
+  </ul>
+  <h3>Other</h3>
+  <ul>
+  </ul>
+ </div>
+ <div class="tab-pane fade" id="education" role="tabpanel" aria-labelledby="educationTab">
+  <h3>Florida State University (2012 - 2016)</h3>
+  <ul>
+   <li>Pre-law philosophy major minoring in classics and English</li>
+  </ul>
+ </div>
+ <div class="tab-pane fade" id="experience" role="tabpanel" aria-labelledby="experienceTab">
+  <h3>Clusiv UX Tester (Feb 2022 - May 2022)</h3>
+  <ul>
+   <li>Tested and provided constructive, detailed feedback on the accessibility and usability of education-centric web apps</li>
+   <li>Completed required tasks and submitted weekly reviews long before their deadlines</li>
+   <li>Made brief but clear suggestions related both to the user experience and to the substance of course materials which improved the product overall</li>
+  </ul>
+ </div>
+ <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contactTab">
+  You can contact me by email <a href="mailto:tech.wow675@slmails.com">here</a>.
+ </div>
+</div>
+{% endblock content %}
