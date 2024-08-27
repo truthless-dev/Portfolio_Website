@@ -38,6 +38,7 @@ CSRF_TRUSTED_ORIGINS = [
 INSTALLED_APPS = [
     "accounts.apps.AccountsConfig",
     "braille.apps.BrailleConfig",
+    "resume.apps.ResumeConfig",
     "django_recaptcha",
     "django.contrib.admin",
     "django.contrib.auth",
