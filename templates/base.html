@@ -9,10 +9,16 @@
  </head>
 
  <body class="container">
-  {% include "header.html" %}
+  {% include "navbar.html" %}
 
-  {% block content %}
-  {% endblock content %}
+  <main>
+   <div>
+    <h1>{{ title | default:"TC" }}</h1>
+   </div>
+
+   {% block content %}
+   {% endblock content %}
+  </main>
 
   {% include "footer.html" %}
 
