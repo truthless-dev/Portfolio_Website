@@ -9,9 +9,13 @@
  </head>
 
  <body class="container">
-  {% include "header.html" %}
+  {% include "navbar.html" %}
 
   <main>
+   <div>
+    <h1>{{ title | default:"TC" }}</h1>
+   </div>
+
    {% block content %}
    {% endblock content %}
   </main>
