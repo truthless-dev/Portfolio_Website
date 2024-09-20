@@ -36,7 +36,9 @@ CSRF_TRUSTED_ORIGINS = [
 # Application definition
 
 INSTALLED_APPS = [
+    "accounts.apps.AccountsConfig",
     "braille.apps.BrailleConfig",
+    "django_recaptcha",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -56,6 +58,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "portfolio.urls"
+LOGIN_URL = "login"
+LOGOUT_REDIRECT_URL = "/"
 
 TEMPLATES = [
     {
@@ -85,6 +89,11 @@ WSGI_APPLICATION = "portfolio.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Replace the default User model with a custom one.
+# https://docs.djangoproject.com/en/5.1/ref/settings/#std-setting-AUTH_USER_MODEL
+
+AUTH_USER_MODEL = "accounts.User"
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

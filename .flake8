@@ -4,3 +4,6 @@ max-line-length = 88
 ignore =
     # Imported but unused. Django's generated app modules include a lot of these.
     F401,
+per-file-ignores =
+# Line too long in migration files.
+    /*/migrations/*.py: E501

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="date-joined">
+    <p>Member since {{ profile_user.date_joined|date:"d M Y" }}.</p>
+</div>
+{% if is_my_profile %}
+  <div>
+    <a href="{% url 'password_change' %}">Change password</a>
+    <form method="POST" action="{% url 'logout' %}">
+      {% csrf_token %}
+      <button type="submit">Log out</button>
+    </form>
+  </div>
+{% endif %}
+{% endblock content %}

@@ -12,6 +12,9 @@ ALLOWED_HOSTS = [
     ".tylerchristie.dev",
 ]
 
+RECAPTCHA_PUBLIC_KEY = os.environ["RECAPTCHA_PUBLIC_KEY"]
+RECAPTCHA_PRIVATE_KEY = os.environ["RECAPTCHA_PRIVATE_KEY"]
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
