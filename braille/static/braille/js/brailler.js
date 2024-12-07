@@ -243,7 +243,50 @@ function onBrailleRelease(event) {
 }
 
 
+function getInputFormat() {
+    return $("#input_format_group input[name='input_format']:checked").val();
+}
+
+
+// Set or remove key-press events on the Brailler depending on the
+// value of `input_format`
+function setBraillerEvents() {
+    const brailler = getBrailler();
+    let events = {keydown: onBraillePress, keyup: onBrailleRelease};
+    if (getInputFormat() === "braille") {
+    brailler.on(events);
+    } else {
+        brailler.off(events);
+    }
+    brailler.val("");
+}
+
+
+// Make an async request for a back-translation of Braille input
+async function getBackTranslation() {
+    const translation = $("#translation");
+    const brailleInput = getBrailler().val();
+    const url = `/braille/back-translate?input=${encodeURIComponent(brailleInput)}`;
+    const fetchArgs = {
+        method: "GET",
+        headers: {
+            "X-Requested-With": "XMLHttpRequest",
+        }
+    };
+    try {
+        let response = await fetch(url, fetchArgs);
+        let data = await response.json();
+        let output = (response.ok) ? data.translation : ("Error: " + data.error);
+        translation.html(output);
+    } catch (error) {
+        translation.html("Error: " + error.message);
+    }
+}
+
+
 $(function() {
-    getBrailler().on({keydown: onBraillePress, keyup: onBrailleRelease});
+    $("#input_format_group")
+        .on("click", "input[name='input_format']", setBraillerEvents);
+    setBraillerEvents();
 });
 

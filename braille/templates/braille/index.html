@@ -23,6 +23,21 @@
   </div>
   <div>
     <h2>Brailler</h2>
-    <label>Enter your Braille here: </label><textarea id="brailler" rows="10" cols="80"></textarea>
+    <fieldset id="input_format_group">
+      <legend>Select an input format.</legend>
+      <div>
+        <input id="radio_format_braille" type="radio" name="input_format" value="braille" checked>
+        <label for="radio_format_braille">Braille</label>
+      </div>
+      <div>
+        <input id="radio_format_print" type="radio" name="input_format" value="print">
+        <label for="radio_format_print">Print</label>
+      </div>
+    </fieldset>
+    <label for="brailler">Enter your Braille here: <textarea id="brailler" rows="10" cols="80"></textarea></label>
+    <input type="button" value="Translate" onclick="getBackTranslation()">
+    <div>
+      <div id="translation" aria-live="polite"></div>
+    </div>
   </div>
 {% endblock content %}
