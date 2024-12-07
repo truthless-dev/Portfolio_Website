@@ -221,6 +221,19 @@ files = [
 colors = ["colorama (>=0.4.6)"]
 
 [[package]]
+name = "louis"
+version = "3.32.0"
+description = "Python bindings for liblouis"
+optional = false
+python-versions = "*"
+files = []
+develop = false
+
+[package.source]
+type = "directory"
+url = "../../liblouis/python"
+
+[[package]]
 name = "mccabe"
 version = "0.7.0"
 description = "McCabe checker, plugin for flake8"
@@ -537,4 +550,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "e6b902deba95cbb75b70e579f6e3c00b05ba39564b09e5cf5c8a404b8ee6f182"
+content-hash = "80fad53a51f20d76c9423f1f073e7cbe172df3c439313064d9f7fec7ee471f01"
