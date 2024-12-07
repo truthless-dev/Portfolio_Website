@@ -2,27 +2,27 @@
 
 <html lang="en">
 
- <head>
-  {% block meta %}
-   {% include "meta.html" %}
-  {% endblock meta %}
- </head>
+  <head>
+    {% block meta %}
+      {% include "meta.html" %}
+    {% endblock meta %}
+  </head>
 
- <body class="container">
-  {% include "navbar.html" %}
+  <body class="container">
+    {% include "navbar.html" %}
 
-  <main>
-   <div>
-    <h1>{{ title | default:"TC" }}</h1>
-   </div>
+    <main>
+      <div>
+        <h1>{{ title | default:"TC" }}</h1>
+      </div>
 
-   {% block content %}
-   {% endblock content %}
-  </main>
+      {% block content %}
+      {% endblock content %}
+    </main>
 
-  {% include "footer.html" %}
+    {% include "footer.html" %}
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
- </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
 
 </html>
