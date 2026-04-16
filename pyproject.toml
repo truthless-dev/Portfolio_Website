@@ -1,40 +1,25 @@
-[tool.poetry]
+[project]
 name = "portfolio"
 version = "0.2.0"
 description = "Personal portfolio website"
-authors = ["truthless-dev <truthless.deviant248@simplelogin.fr>"]
-license = "MIT"
 readme = "README.md"
+license = "MIT"
+authors = [
+    { name = "truthless-dev", email = "truthless.deviant248@simplelogin.fr" },
+]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "django>=5.1.0,<6",
+    "gunicorn>=23.0.0,<24",
+    "psycopg2-binary>=2.9.9,<3",
+    "python-dotenv>=1.0.1,<2",
+    "django-recaptcha>=4.0.0,<5",
+]
 
-[tool.poetry.dependencies]
-python = "^3.12"
-django = "^5.1"
-gunicorn = "^23.0.0"
-psycopg2-binary = "^2.9.9"
-python-dotenv = "^1.0.1"
-django-recaptcha = "^4.0.0"
-
-[tool.poetry.group.dev.dependencies]
-black = "^24.8.0"
-isort = "^5.13.2"
-flake8 = "^7.1.1"
-pre-commit = "^3.8.0"
-
-[tool.isort]
-profile = "black"
-atomic = true
-honor_noqa = true
-include_trailing_comma = true
-line_length = 88
-lines_after_imports = 2
-multi_line_output = 1
-only_modified = true
-remove_redundant_aliases = true
-skip_gitignore = true
-split_on_trailing_comma = true
-star_first = true
-use_parentheses = true
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+dev = [
+    "black>=24.8.0,<25",
+    "isort>=5.13.2,<6",
+    "flake8>=7.1.1,<8",
+    "pre-commit>=3.8.0,<4",
+]
