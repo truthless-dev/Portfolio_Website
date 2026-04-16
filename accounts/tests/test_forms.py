@@ -8,7 +8,6 @@ from accounts.forms import UserRegistrationForm
 
 
 class TestUserCreation(TestCase):
-
     @classmethod
     def setUpClass(cls):
         super().setUpClass()

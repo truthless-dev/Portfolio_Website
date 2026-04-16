@@ -5,7 +5,6 @@ from django.http import Http404
 
 
 class UserManager(BaseUserManager):
-
     def get_by_natural_key(self, username):
         args = {f"{self.model.USERNAME_FIELD}__iexact": username}
         return self.get(**args)

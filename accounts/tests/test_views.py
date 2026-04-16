@@ -8,7 +8,6 @@ from django_recaptcha.client import RecaptchaResponse
 
 
 class TestProfileView(TestCase):
-
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -34,7 +33,6 @@ class TestProfileView(TestCase):
 
 
 class TestUserProfileView(TestCase):
-
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -68,7 +66,6 @@ class TestUserProfileView(TestCase):
 
 
 class TestRegistrationView(TestCase):
-
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
